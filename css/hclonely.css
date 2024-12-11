@@ -186,7 +186,6 @@ input::-webkit-input-placeholder{
   margin-right: 5px;
   margin-top: 2.5px;
 }
-
 body.night .board {
   background: #2c2e2f;
   box-shadow: 0px 0px 6px #00000061;
