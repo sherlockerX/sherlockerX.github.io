@@ -1,112 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+extends includes/layout.pug
 
-<head>
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="NicholasX" />
-  <title>NicholasX - NicholasX</title>
-  <meta name="keywords" content="网址收藏,常用网址,网址导航,网址大全">
-  <meta name="description" content="网站包含 NicholasX 本人常用网站，同时提供多站点导航功能，若是喜欢赶紧收藏吧">
-  <link rel="shortcut icon" href="/favicon.ico">
-  
-<link rel="stylesheet" href="/css/hclonely.css">
-<link rel="stylesheet" href="/css/fonts/linecons/css/linecons.min.css">
-<link rel="stylesheet" href="/css/fonts/fontawesome/css/all.min.css">
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/xenon-core.min.css">
-<link rel="stylesheet" href="/css/xenon-components.min.css">
-<link rel="stylesheet" href="/css/xenon-skins.min.css">
-<link rel="stylesheet" href="/css/nav.min.css">
+block content
+  #post
+    if top_img === false || page.bilibili_bg
+      include includes/header/post-info.pug
+    if theme.post_head_ai_description
+      include includes/anzhiyu/ai-info.pug
+    - let url = page.copyright_url || page.permalink
+    article#article-container.post-content(itemscope itemtype=url_for(url))
+      header
+        if (theme.post_meta.post.categories && page.categories && page.categories.data.length > 0)
+          each item, index in page.categories.data
+            a(href=url_for(item.path) itemprop="url").post-meta-categories #[=item.name]
+        if (theme.post_meta.page.tags)
+          each item, index in page.tags.data
+            a(href=url_for(item.path) tabindex="-1" itemprop="url")=item.name
+        h1#CrawlerTitle(itemprop="name headline")= page.title || _p('no_title')
+        - let author = page.copyright_author || config.author
+        span(itemprop="author" itemscope itemtype="http://schema.org/Person")=author
+        if (theme.post_meta.post.date_type)
+          if (theme.post_meta.post.date_type === 'both')
+            time(itemprop="dateCreated datePublished" datetime=date_xml(page.date) title=_p('post.created') + ' ' + full_date(page.date))=date(page.date, config.date_format)
+            time(itemprop="dateCreated datePublished" datetime=date_xml(page.updated) title=_p('post.updated') + ' ' + full_date(page.updated))=date(page.updated, config.date_format)
+          else
+            - let data_type_update = theme.post_meta.post.date_type === 'updated'
+            - let date_type = data_type_update ? 'updated' : 'date'
+            time(itemprop="dateCreated datePublished" datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
+      !=page.content
 
-  
-<script src="/js/jquery-1.11.1.min.js"></script>
+    include includes/post/post-copyright.pug
 
- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
- <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-  <script>
-    var userDefinedSearchData = {"custom":false,"thisSearch":"https://www.baidu.com/s?wd=","thisSearchIcon":"url(https://www.baidu.com/favicon.ico)","hotStatus":false};
-    var expandAll = true;
-  </script>
-  
-<script src="/js/header.js"></script>
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-        
-<script src="/js/html5shiv.min.js"></script>
-
-        
-<script src="/js/respond.min.js"></script>
-
-    <![endif]-->
-  <!-- / FB Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://navi.harriswong.top/hello-world.html">
-  <meta property="og:title" content="NicholasX - NicholasX">
-  <meta property="og:description" content="网站包含 NicholasX 本人常用网站，同时提供多站点导航功能，若是喜欢赶紧收藏吧">
-  <meta property="og:site_name" content="NicholasX - NicholasX">
-  
-  <meta property="og:image" content="/images/webstack_banner_cn.png">
-  
-  <!-- / Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NicholasX - NicholasX">
-  <meta name="twitter:description" content="网站包含 NicholasX 本人常用网站，同时提供多站点导航功能，若是喜欢赶紧收藏吧">
-  
-  <meta name="twitter:image" content="/images/webstack_banner_cn.png">
-  
-  
-  <link rel="stylesheet" type="text/css" href="/css/custom.css"> <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_2204525_jxth1d6fs6o.css"> <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media='all'" />
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-</head>
-
-
-
-
-  <footer class="main-footer sticky footer-type-1">
-  <div class="footer-inner">
-    <!-- Add your copyright text here -->
-    <p>
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
       
-      &copy; 2024
-      <a href="javascript:void(0);"><strong>NicholasX</strong></a> | Design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
-    </p>
-    
-    <div class="go-up">
-      <a href="#" rel="go-top">
-        <i class="fas fa-angle-up"></i>
-      </a>
-    </div>
-  </div>
-</footer>
-</div>
-</div>
-
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/TweenMax.min.js"></script>
-<script src="/js/resizeable.min.js"></script>
-<script src="/js/joinable.js"></script>
-<script src="/js/xenon-api.min.js"></script>
-<script src="/js/xenon-toggles.min.js"></script>
-<script src="/js/xenon-custom.min.js"></script>
-
-
-
-
-<script src="/js/lozad.min.js"></script>
-
-
-
-  
-  <div class="bg"></div> <script src="/js/custom.js"></script> <script src="/js/lozad.min.js"></script>
-  
-</body>
-
-</html>
