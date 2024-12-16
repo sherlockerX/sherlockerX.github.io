@@ -6,7 +6,7 @@
   <link href="https://navi.harriswong.top/atom.xml" rel="self"/>
   
   <link href="https://navi.harriswong.top/"/>
-  <updated>2024-12-16T09:03:15.677Z</updated>
+  <updated>2024-12-16T16:37:45.001Z</updated>
   <id>https://navi.harriswong.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搜索Plus</title>
+    <link href="https://navi.harriswong.top/%E6%90%9C%E7%B4%A2Plus.html"/>
+    <id>https://navi.harriswong.top/%E6%90%9C%E7%B4%A2Plus.html</id>
+    <published>2024-12-16T15:28:08.602Z</published>
+    <updated>2024-12-16T16:37:45.001Z</updated>
+    
+    <content type="html"><![CDATA[<p>​在日常的搜索过程中，经常有搜不准的苦恼，每次搜索都有很多的杂项，筛选信息就需要消耗大量的时间，今天特意学习了一下搜索的技巧，在这里和大家一起分享。闲话少说，下面开始文章主要内容！</p><h1 id="Seaech"><a href="#Seaech" class="headerlink" title="Seaech"></a>Seaech</h1><h2 id="精确搜索"><a href="#精确搜索" class="headerlink" title="精确搜索"></a>精确搜索</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure><blockquote><p>查询词加上双引号，表示查询词不可拆分，在搜索结果中必需完整出现，可以对查询词精确匹配。</p></blockquote><p>不加双引号：</p><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-16_23-53-21.png" class=""><p>加双引号：</p><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-16_23-55-07.png" class=""><blockquote><p>这里我们可以看到没有看到完全匹配，但是搜出来还是这个官网，原因就在于“英语六级”完整出现在这个网站的内容中，也会被搜索出来，我们如何进行限定呢，我们继续往下看！</p></blockquote><h2 id="搜索范围限定在网页标题"><a href="#搜索范围限定在网页标题" class="headerlink" title="搜索范围限定在网页标题"></a>搜索范围限定在网页标题</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">intitle:<br></code></pre></td></tr></table></figure><blockquote><p>注意：在进行搜索的过程中，(intitle:)和要搜索的内容之间不要有空格</p></blockquote><p>例子如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">intitle:英语六级资料<br></code></pre></td></tr></table></figure><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-16_23-44-21.png" class=""><h2 id="搜索范围限定在特定站点中"><a href="#搜索范围限定在特定站点中" class="headerlink" title="搜索范围限定在特定站点中"></a>搜索范围限定在特定站点中</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">site:后面跟的是站点域名，不需要加http://或https://<br>site:和站点名之间，也不需要加空格<br></code></pre></td></tr></table></figure><p>如下所示：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">六级阅读 site:bilibili.com<br></code></pre></td></tr></table></figure><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-16_23-49-48.png" class=""><h2 id="搜索特定的文件类型"><a href="#搜索特定的文件类型" class="headerlink" title="搜索特定的文件类型"></a>搜索特定的文件类型</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">filetype:(pdf、word...)<br></code></pre></td></tr></table></figure><blockquote><p>使用filetype:对我们所需要的特定的文件进行搜索</p></blockquote><p>下面看下搜索效果：</p><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-17_00-01-21.png" class=""><h2 id="相似网站搜索"><a href="#相似网站搜索" class="headerlink" title="相似网站搜索"></a>相似网站搜索</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">realted: <br></code></pre></td></tr></table></figure><blockquote><p>搜索和网站类似的网站，在该指令和搜索词之间有一个空格</p></blockquote><p>搜索效果：</p><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-17_00-14-32.png" class=""><h2 id="网址链接中搜索"><a href="#网址链接中搜索" class="headerlink" title="网址链接中搜索"></a>网址链接中搜索</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">inurl:<br></code></pre></td></tr></table></figure><blockquote><p>和搜索词之间没有空格</p></blockquote><p>inurl:huawei</p><img src="/%E6%90%9C%E7%B4%A2Plus/Snipaste_2024-12-17_00-18-17.png" class=""><h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><blockquote><p>以上是一些常用的方法，运算符以及通配符的使用相信大家平时都有用到，还有一些类似的可以搜索多个关键词，如下所示</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">allintext:（在网页内容中多关键词搜索）<br>allinurl:（在链接中多个关键词搜索）<br>allintitle:（在标题中多个关键词搜索）<br>以上三个使用说明：冒号后面不能有空格，多个关键词之间有空格<br>define: (查询关键词的定义，冒号之后有空格)<br></code></pre></td></tr></table></figure><p>end~</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​		在日常的搜索过程中，经常有搜不准的苦恼，每次搜索都有很多的杂项，筛选信息就需要消耗大量的时间，今天特意学习了一下搜索的技巧，在这里和大家一起分享。闲话少说，下面开始文章主要内容！&lt;/p&gt;
+&lt;h1 id=&quot;Seaech&quot;&gt;&lt;a href=&quot;#Seaech&quot; class=</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://navi.harriswong.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="搜索" scheme="https://navi.harriswong.top/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>保姆级刷客教程</title>
