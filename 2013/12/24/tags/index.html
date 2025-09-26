@@ -72,9 +72,9 @@
 
 
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2013/12/24/categories/"><span class="title">Categories</span></a><a class="item title" href="/2013/12/25/excerpts/"><span class="title">Excerpts</span></a><a class="item title" href="/2013/12/24/elements/"><span class="title">Elements</span></a><a class="item title" href="/2019/07/25/code-highlight/"><span class="title">Code Highlight Style test</span></a><a class="item title" href="/2013/12/25/gallery-post/"><span class="title">Gallery Post</span></a><a class="item title" href="/2013/12/24/hello-world/"><span class="title">Hello World</span></a><a class="item title" href="/2013/12/26/images/"><span class="title">Images</span></a><a class="item title" href="/2013/12/24/long-title/"><span class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</span></a><a class="item title" href="/2018/07/24/markdown/"><span class="title">Markdown Style test</span></a><a class="item title" href="/2013/12/25/tag-plugins/"><span class="title">Tag Plugins</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2013/12/24/categories/"><span class="title">Categories</span></a><a class="item title" href="/2013/12/24/elements/"><span class="title">Elements</span></a><a class="item title" href="/2013/12/26/images/"><span class="title">Images</span></a><a class="item title" href="/2019/07/25/code-highlight/"><span class="title">Code Highlight Style test</span></a><a class="item title" href="/2013/12/25/excerpts/"><span class="title">Excerpts</span></a><a class="item title" href="/2013/12/25/gallery-post/"><span class="title">Gallery Post</span></a><a class="item title" href="/2013/12/24/long-title/"><span class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</span></a><a class="item title" href="/2018/07/24/markdown/"><span class="title">Markdown Style test</span></a><a class="item title" href="/2013/12/25/tag-plugins/"><span class="title">Tag Plugins</span></a><a class="item title" href="/2013/12/24/tags/"><span class="title">Tags</span></a></div></widget>
 </div>
-
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/nishuobianchenghennan" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
 
@@ -115,7 +115,45 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer footnote"><hr><div class="text"><center>
+  <span>
+    © 2025
+    <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/FelicxFoster">Felicx</a>
+    使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/FelicxFoster/hexo-theme-stellar">Stellar</a>
+    创建
+  </span>
+  <br>
+  <!--不蒜子计数器-->
+  <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!--添加一个访问量-->
+  <span>总访问 <span id="busuanzi_value_site_pv" style="font-weight: bold;">113701</span> 次 | 本页访问 <span id="busuanzi_value_page_pv" style="font-weight: bold;">326</span> 次</span>
+  <br>
+  <span id="runtime_span"></span>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var runtime_span = document.getElementById('runtime_span');
+      
+      function show_runtime() {
+        var t1 = Date.UTC(2025, 8, 25, 14, 0, 0); // 网站建立时间, 月份从0开始
+        var t2 = new Date().getTime();
+        var diff = (t2 - t1) / 1000;
+        
+        var days = Math.floor(diff / (24 * 3600));
+        diff %= (24 * 3600);
+        var hours = Math.floor(diff / 3600);
+        diff %= 3600;
+        var minutes = Math.floor(diff / 60);
+        var seconds = Math.floor(diff % 60);
+
+        runtime_span.innerHTML = "🦉营业：" + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒🦉";
+      }
+      
+      show_runtime();
+      setInterval(show_runtime, 1000); // 每秒钟刷新一次
+    });
+  </script>
+</center>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 </aside><div class='float-panel'>
