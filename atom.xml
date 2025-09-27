@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-09-27T08:26:38.791Z</updated>
+  <updated>2025-09-27T11:02:59.459Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="http://example.com/2025/09/27/About-me/"/>
     <id>http://example.com/2025/09/27/About-me/</id>
     <published>2025-09-27T06:50:25.000Z</published>
-    <updated>2025-09-27T08:26:38.791Z</updated>
+    <updated>2025-09-27T11:02:59.459Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h1><blockquote><p>搭建一个知识类的博客是我一直想做的事情</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h1><blockquote><p>​      搭建一个知识类的博客是我一直想做的事情，但是每次出发都会在中途不知所踪，这次打算将实践与学习的过程做一个记录，方便每周的复盘，如果对大家有帮助就更好了！</p></blockquote><h2 id="contact-me"><a href="#contact-me" class="headerlink" title="contact me"></a>contact me</h2>]]></content>
     
     
       
       
     <summary type="html">&lt;h1 id=&quot;About-me&quot;&gt;&lt;a href=&quot;#About-me&quot; class=&quot;headerlink&quot; title=&quot;About me&quot;&gt;&lt;/a&gt;About me&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;搭建一个知识类的博客是我一直想做的事情&lt;/p&gt;
-&lt;/blockqu</summary>
+&lt;p&gt;​      搭建一个知识类的博客是我一直想做的事情，但是每次出发</summary>
       
     
     
