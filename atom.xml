@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>NicholasX</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-09-27T06:55:19.456Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>About me</title>
+    <link href="http://example.com/2025/09/27/About-me/"/>
+    <id>http://example.com/2025/09/27/About-me/</id>
+    <published>2025-09-27T06:50:25.000Z</published>
+    <updated>2025-09-27T06:55:19.456Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h1><blockquote><p>搭建一个知识类的博客是我一直想做的事情，刚好现在也完成了上一个</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;About-me&quot;&gt;&lt;a href=&quot;#About-me&quot; class=&quot;headerlink&quot; title=&quot;About me&quot;&gt;&lt;/a&gt;About me&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;搭建一个知识类的博客是我一直想做的事情，刚好现在也完成了上一个&lt;/</summary>
+      
+    
+    
+    
+    <category term="Start" scheme="http://example.com/categories/Start/"/>
+    
+    
+    <category term="碎碎念" scheme="http://example.com/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+  </entry>
+  
+</feed>
